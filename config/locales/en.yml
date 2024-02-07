@@ -12,9 +12,11 @@ en:
         tabs:
           create_error: There was an error creating the tab
           destroy_error: There was an error deleting the tab
+          edit_error: There was an error editing the tab
           destroy_message: The tab was successfully deleted
           save: Save
           success_message: The tab was successfully created
+          edit_success: The tab was successfully edited
     content_blocks:
       slider:
         admin_menu: Homepage Slider
