@@ -15,6 +15,10 @@ module Decidim
           data.each do |id, weight|
             content_block = collection.find_by(id: id)
             content_block.update!(weight: weight) if content_block.present?
+
+            next unless content_block.errors.any?
+
+            flash[:error] = content_block.errors.full_messages.join(", ")
           end
         end
       end
