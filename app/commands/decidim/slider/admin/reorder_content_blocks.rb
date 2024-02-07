@@ -12,13 +12,19 @@ module Decidim
             hash.update(id => index + 1)
           end
 
+          error = nil
+
           data.each do |id, weight|
             content_block = collection.find_by(id: id)
             content_block.update!(weight: weight) if content_block.present?
 
             next unless content_block.errors.any?
 
-            flash[:error] = content_block.errors.full_messages.join(", ")
+            error = content_block.errors.full_messages.join(", ")
+          end
+
+          if error.present?
+            flash[:error] = error
           end
         end
       end
