@@ -22,6 +22,10 @@ module Decidim
         def decidim_admin_slider
           Decidim::Slider::AdminEngine.routes.url_helpers
         end
+
+        def translated_model_name
+          translated_attribute(model.settings.title)
+        end
       end
     end
   end
