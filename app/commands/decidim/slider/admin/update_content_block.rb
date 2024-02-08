@@ -34,7 +34,6 @@ module Decidim
           return broadcast(:invalid) unless images_valid
 
           broadcast(:ok, content_block)
-
         rescue StandardError
           broadcast(:invalid)
         end

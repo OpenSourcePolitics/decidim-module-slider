@@ -32,7 +32,6 @@ module Decidim
             error = content_block.errors.full_messages.join(", ")
             title = translated_attribute(content_block.settings.title).presence || content_block.manifest_name
             error = t("decidim.content_blocks.update.error", title: title, error: error)
-
           end
 
           if error.present?

@@ -6,7 +6,9 @@ module Decidim
       class TabsController < Decidim::Admin::ApplicationController
         layout "decidim/admin/settings"
 
-        helper_method :content_block_create_success_text, :content_block_create_error_text, :content_block_edit_success_text, :content_block_edit_error_text, :content_block_destroy_success_text, :content_block_destroy_error_text
+        helper_method :content_block_create_success_text, :content_block_create_error_text,
+                      :content_block_edit_success_text, :content_block_edit_error_text,
+                      :content_block_destroy_success_text, :content_block_destroy_error_text
         before_action :patch_organization
 
         # uncomment me when upgrading to Decidim 0.28
