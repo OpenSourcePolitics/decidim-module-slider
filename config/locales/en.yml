@@ -7,7 +7,7 @@ en:
           active_blocks_title: Active Blocks
           add: Add Tabs
           destroy_confirmation: Are you sure you want to delete this tab?
-          inactive_blocks_title: Active Blocks
+          inactive_blocks_title: Inactive Blocks
           title: The title for Tabs
         tabs:
           create_error: There was an error creating the tab
@@ -18,6 +18,9 @@ en:
           success_message: The tab was successfully created
           edit_success: The tab was successfully edited
     content_blocks:
+      update:
+        error: "An error occurred while updating '%{title}': %{error}"
+
       slider:
         admin_menu: Homepage Slider
         name: Slider

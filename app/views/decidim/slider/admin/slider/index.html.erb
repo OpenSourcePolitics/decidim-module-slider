@@ -58,6 +58,8 @@
             url: document.querySelector(".js-list-actives").dataset.sortUrl,
             contentType: "application/json",
             data: JSON.stringify({ ids_order: activeBlocksId })
-        });
+        }).catch(function (error) {
+            window.location.reload();
+        })
     })
 </script>
