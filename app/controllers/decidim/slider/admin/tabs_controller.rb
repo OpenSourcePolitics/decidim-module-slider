@@ -6,7 +6,9 @@ module Decidim
       class TabsController < Decidim::Admin::ApplicationController
         layout "decidim/admin/settings"
 
-        helper_method :content_block_create_success_text, :content_block_create_error_text
+        helper_method :content_block_create_success_text, :content_block_create_error_text,
+                      :content_block_edit_success_text, :content_block_edit_error_text,
+                      :content_block_destroy_success_text, :content_block_destroy_error_text
         before_action :patch_organization
 
         # uncomment me when upgrading to Decidim 0.28
@@ -60,9 +62,11 @@ module Decidim
 
           UpdateContentBlock.call(@form, content_block, content_block_scope) do
             on(:ok) do
+              flash[:success] = content_block_edit_success_text
               redirect_to edit_resource_landing_page_path
             end
             on(:invalid) do
+              flash[:error] = content_block_edit_error_text
               edit # Sets the model to the view so that it can render the form
               render "edit"
             end
@@ -89,6 +93,14 @@ module Decidim
 
         def content_block_destroy_error_text
           t("slider.tabs.destroy_error", scope: "decidim.admin")
+        end
+
+        def content_block_edit_success_text
+          t("slider.tabs.edit_success", scope: "decidim.admin")
+        end
+
+        def content_block_edit_error_text
+          t("slider.tabs.edit_error", scope: "decidim.admin")
         end
 
         def patch_organization
