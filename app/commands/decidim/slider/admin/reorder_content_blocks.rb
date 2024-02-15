@@ -11,7 +11,7 @@ module Decidim
           reorder_steps
           broadcast(:ok)
         rescue StandardError
-          broadcast(:invalid, "Error while reordering content blocks")
+          broadcast(:invalid, t("decidim.content_blocks.update.global_error"))
         end
 
         private

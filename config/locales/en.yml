@@ -20,7 +20,7 @@ en:
     content_blocks:
       update:
         error: "An error occurred while updating '%{title}': %{error}"
-
+        global_error: "An error occurred while reordering the blocks"
       slider:
         admin_menu: Homepage Slider
         name: Slider
