@@ -5,7 +5,7 @@ module Decidim
     module Admin
       # A command with all the business logic to destroy a content block
       # TODO: Remove when upgrading to Decidim 0.28
-      class DestroyContentBlock < Rectify::Command
+      class DestroyContentBlock < Decidim::Command
         # Public: Initializes the command.
         #
         # content_block - The content_block to destroy

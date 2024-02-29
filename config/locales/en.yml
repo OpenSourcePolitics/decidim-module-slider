@@ -1,5 +1,9 @@
 ---
 en:
+  activemodel:
+    attributes:
+      content_block_attachment:
+        image: Image
   decidim:
     admin:
       slider:

@@ -4,7 +4,7 @@ module Decidim
   module Slider
     module Admin
       # TODO: Remove when upgrading to Decidim 0.28
-      class CreateContentBlock < Rectify::Command
+      class CreateContentBlock < Decidim::Command
         # Public: Initializes the command.
         #
         # organization - the Organization where the content blocks reside
