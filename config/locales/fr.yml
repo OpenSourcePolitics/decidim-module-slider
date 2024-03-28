@@ -7,7 +7,7 @@ fr:
           active_blocks_title: Blocs actifs
           add: Ajouter un onglet
           destroy_confirmation: Êtes-vous sûr de vouloir supprimer cet onglet ?
-          inactive_blocks_title: Blocs actifs
+          inactive_blocks_title: Blocs inactifs
           title: Le titre des onglets
         tabs:
           create_error: Une erreur s'est produite lors de la création de l'onglet
